@@ -29,7 +29,7 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'}).addTo(map);
 
-    fetch(`${BASEURL}/pins.json`)
+    fetch(`/pins.json`)
         .then(response => response.json())
         .then(pins => {
             pins.forEach(pin => {
