@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /pins.json
+---
+[
+{% assign sorted_pins = site.pins | sort: 'date_visited' | reverse %}
+{% for pin in sorted_pins %}
+{
+"title": {{ pin.title | jsonify }},
+"date": {{ pin.date_visited | date_to_xmlschema | jsonify }},
+"lat": {{ pin.lat | jsonify }},
+"lng": {{ pin.lng | jsonify }},
+"visited": {{ pin.date_visited | jsonify }},
+"city": {{ pin.city | jsonify }},
+"description": {{ pin.description | jsonify }},
+"image": {{ pin.image | jsonify }}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
