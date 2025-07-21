@@ -21,15 +21,12 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-    const BASEURL = "{{ site.baseurl }}";
-</script>
-<script>
     // Initialize map (example using Leaflet)
     const map = L.map('map').setView([38.47, -113.30], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'}).addTo(map);
 
-    fetch(`${BASEURL}/pins.json`)
+    fetch(`/push-pin-map}/pins.json`)
         .then(response => response.json())
         .then(pins => {
             pins.forEach(pin => {

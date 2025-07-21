@@ -1,4 +1,3 @@
-baseurl: "/push-pin-map"
 collections:
   pins:
     output: true
