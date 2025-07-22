@@ -4,7 +4,7 @@ This is a Jekyll-powered interactive push pin map project — great for logging 
 
 ## Live Demo
 
-You can view the live map here: [https://your-username.github.io/push-pin-map](https://your-username.github.io/push-pin-map)  
+You can view the live map here: [https://mlaguren.github.io/push-pin-map](https://mlaguren.github.io/push-pin-map)  
 
 
 ---
